@@ -1,0 +1,128 @@
+.linha1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+.linha2{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linha3{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quadrado1, .quadrado2, .quadrado3, .quadrado4, .quadrado5, .quadrado6, .quadrado7, .quadrado8, .quadrado9, .quadrado10{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+
+.quadrado1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.quadrado2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadrado3{
+    position: relative;
+}
+
+.quadrado4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.quadrado5{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+}
+
+.div1_quadrado6{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div2_quadrado6{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.div3_quadrado6{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.quadrado7{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.quadrado8{
+    position: relative;
+}
+
+.quadrado9{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadrado10{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.quadradinho, .quadradinho4, .quadradinho5, .quadradinho8, .quadradinho9, .quadradinho10, .quadradinho11, .quadradinho13, .quadradinho14{
+    background-color: orange;
+    width: 67px;
+    height: 67px;
+}
+
+.quadradinho4{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.quadradinho5{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.quadradinho13{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.quadradinho14{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
