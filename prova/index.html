@@ -10,9 +10,9 @@
     <section class="produto-informacao">
         <h1>Painel de Análise de Produtos</h1>
         <section class="cadastro-produto">
-            <input type="text" placeholder="Nome do produto">
-            <input type="number" placeholder="Preço (R$)">
-            <input type="number" placeholder="Quantidade">
+            <input type="text" placeholder="Nome do produto" id="produto-nome">
+            <input type="number" placeholder="Preço (R$)" id="produto-preco">
+            <input type="number" placeholder="Quantidade" id="produto-quantidade">
             <button id="cadastrar-produto">Adicionar Produto</button>
         </section>
         <section class="card-principal">
@@ -21,7 +21,7 @@
                     <h3>Produto Mais Caro:</h3>
                 </div>
                 <div class="produto-caro-resultado">
-                    <p id="produto-caro-nome">teste</p>
+                    <p id="produto-caro-nome"></p>
                 </div>
             </div>
             <div class="produto-quantidade">
@@ -29,7 +29,7 @@
                     <h3>Maior Quantidade:</h3>
                 </div>
                 <div class="produto-quantidade-resultado">
-                    <p id="produto-quantidade-nome">teste</p>
+                    <p id="produto-quantidade-nome"></p>
                 </div>
             </div>
             <div class="valor-estoque">
@@ -37,7 +37,7 @@
                     <h3>Valor Total em Estoque:</h3>
                 </div>
                 <div class="valor-estoque-resultado">
-                    <p id="valor-estoque">R$ 0,00</p>
+                    <p id="valor-estoque"></p>
                 </div>
             </div>
         </section>

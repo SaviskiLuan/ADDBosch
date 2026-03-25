@@ -1,15 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: antiquewhite;
     margin: 20px;
 }
 
 
 .produto-informacao{
+    margin-top: 200px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
+    width: 1100px;
 }
 
 h1 {
@@ -27,6 +38,7 @@ h1 {
 }
 
 .cadastro-produto{
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -76,11 +88,6 @@ h1 {
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
-}
-
-.produto-caro p{
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .produto-caro-titulo{
