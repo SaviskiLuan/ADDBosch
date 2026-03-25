@@ -34,7 +34,7 @@ class Veiculo{
     }
 
     setPreco(preco){
-        return preco <= 0  || this.#disponivel === true? console.error("Preço inválido") : this.#preco = preco;
+        return preco <= 0  || this.#disponivel === true || isNaN(preco) ? console.error("Preço inválido") : this.#preco = preco;
     }
 
     getDisponivel(){
@@ -79,7 +79,7 @@ class Carro extends Veiculo{
             return console.error("Número de portas inválido");
         }
 
-        if(!isNaN(portas)){
+        if(isNaN(portas)){
             return console.error("Número de portas deve ser um número válido");
         }
     }
@@ -95,11 +95,11 @@ class Moto extends Veiculo{
             return console.error("Cilindradas inválidas");
         }
 
-        if(!isNaN(cilindradas)){
+        if(isNaN(cilindradas)){
             return console.error("Cilindradas devem ser um número válido");
         }
 
-        if(cilindradas > 50 || cilindradas < 2000){
+        if(cilindradas < 50 && cilindradas > 2000){
             return console.error("Cilindradas fora do intervalo válido");
         }
     }
@@ -110,7 +110,14 @@ const veiculo1 = new Veiculo(1, 'toyota', 'Corolla', 20000, true)
 console.log(veiculo1.mostrarInfo());
 veiculo1.vender();
 console.log(veiculo1.mostrarInfo());
-veiculo1.setPreco(25000);
+veiculo1.setPreco(205000);
+veiculo1.vender();
+veiculo1.retonarEstoque();
 console.log(veiculo1.mostrarInfo());
 
-const carro1 = new Carro(2, 'Honda', 'Civic', 22000, '2')
+
+const carro1 = new Carro(2, 'Honda', 'Civic', 22000, 4)
+console.log(carro1.mostrarInfo());
+
+const moto1 = new Moto(3, 'Yamaha', 'MT-03', 7500, 689)
+console.log(moto1.mostrarInfo());
