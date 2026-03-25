@@ -1,0 +1,151 @@
+// ==========================
+// 🔹 EX 1 - Classe Pessoa
+// ==========================
+class Pessoa {
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    apresentar(){
+        console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos`);
+    }
+}
+
+const p1 = new Pessoa("Luan", 19);
+p1.apresentar();
+
+
+// ==========================
+// 🔹 EX 2 - Encapsulamento
+// ==========================
+class Pessoa2 {
+    #nome;
+
+    constructor(nome, idade){
+        if(!nome) throw Error("Nome inválido");
+
+        this.#nome = nome;
+        this.idade = idade;
+    }
+
+    getNome(){
+        return this.#nome;
+    }
+
+    setNome(novoNome){
+        if(!novoNome) throw Error("Nome inválido");
+        this.#nome = novoNome;
+    }
+
+    apresentar(){
+        console.log(`Olá, meu nome é ${this.#nome} e tenho ${this.idade} anos`);
+    }
+}
+
+const p2 = new Pessoa2("Lucas", 20);
+p2.setNome("Pedro");
+p2.apresentar();
+
+
+// ==========================
+// 🔹 EX 3 - Herança + Polimorfismo
+// ==========================
+class Animal {
+    falar(){
+        console.log("Som genérico");
+    }
+}
+
+class Cachorro extends Animal {
+    falar(){
+        console.log("Au Au");
+    }
+}
+
+const c1 = new Cachorro();
+c1.falar();
+
+
+// ==========================
+// 🔹 EX 4 - Produto (POO completo)
+// ==========================
+class Produto {
+    #nome;
+    #preco;
+
+    constructor(nome, preco){
+        if(!nome) throw Error("Nome inválido");
+        if(preco <= 0) throw Error("Preço inválido");
+
+        this.#nome = nome;
+        this.#preco = preco;
+    }
+
+    getNome(){
+        return this.#nome;
+    }
+
+    getPreco(){
+        return this.#preco;
+    }
+
+    exibir(){
+        console.log(`Produto: ${this.#nome} custa R$ ${this.#preco}`);
+    }
+}
+
+const prod = new Produto("Notebook", 3500);
+prod.exibir();
+
+
+// ==========================
+// 🔹 EX 5 e 6 - DOM (botão)
+// ==========================
+
+// HTML necessário:
+// <button id="btn">Clique</button>
+// <p id="texto"></p>
+
+const texto = document.getElementById("texto");
+const botao = document.getElementById("btn");
+
+botao.addEventListener("click", () => {
+    texto.innerHTML = "Você clicou!";
+    texto.style.color = "red";
+});
+
+
+// ==========================
+// 🔹 EX 7, 8, 9, 10 - ARRAY
+// ==========================
+const users = [
+  { name: "Ana", age: 20, salary: 3000, active: true },
+  { name: "Carlos", age: 30, salary: 6000, active: false },
+  { name: "Maria", age: 25, salary: 5000, active: true }
+];
+
+// ✔️ MAP - nomes
+const nomes = users.map(user => user.name);
+console.log("Nomes:", nomes);
+
+// ✔️ FILTER - ativos
+const ativos = users.filter(user => user.active);
+console.log("Ativos:", ativos);
+
+// ✔️ REDUCE - soma salários
+const totalSalarios = users.reduce((acc, user) => acc + user.salary, 0);
+console.log("Total salários:", totalSalarios);
+
+// ✔️ MÉDIA salarial dos ativos
+const ativos2 = users.filter(user => user.active);
+
+const mediaAtivos = ativos2.reduce((acc, user) => acc + user.salary, 0) / ativos2.length;
+console.log("Média ativos:", mediaAtivos);
+
+// ✔️ MAIOR salário
+const maiorSalario = users.reduce((max, user) => {
+    return user.salary > max.salary ? user : max;
+});
+
+console.log("Maior salário:", maiorSalario.name, maiorSalario.salary);

@@ -1,0 +1,108 @@
+body {
+    background-color: antiquewhite;
+    margin: 20px;
+}
+
+
+.produto-informacao{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+h1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    margin-top: 0px;
+    background-color: rgb(73, 113, 201);
+    color: white;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-produto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cadastro-produto input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}   
+
+.cadastro-produto button{
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    background-color: rgb(73, 113, 201);
+    color: white;
+    cursor: pointer;
+}
+
+.card-principal{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.produto-caro-titulo, .produto-quantidade-titulo, .valor-estoque-titulo{
+    color: white;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.produto-caro-resultado, .produto-quantidade-resultado, .valor-estoque-resultado{
+    color: white;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+.produto-caro p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.produto-caro-titulo{
+    background-color: rgb(233, 126, 39);
+
+}
+.produto-quantidade-titulo{
+    background-color: rgb(35, 119, 9);
+}
+
+.valor-estoque-titulo{
+    background-color: rgb(35, 82, 184);
+}
+
+.produto-caro-resultado{
+    background-color: rgb(245, 166, 75);
+}
+
+.produto-quantidade-resultado{
+    background-color: rgb(45, 177, 5);
+}
+
+.valor-estoque-resultado{
+    background-color: rgb(64, 112, 218);
+}

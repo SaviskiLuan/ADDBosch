@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="produto-informacao">
+        <h1>Painel de Análise de Produtos</h1>
+        <section class="cadastro-produto">
+            <input type="text" placeholder="Nome do produto">
+            <input type="number" placeholder="Preço (R$)">
+            <input type="number" placeholder="Quantidade">
+            <button id="cadastrar-produto">Adicionar Produto</button>
+        </section>
+        <section class="card-principal">
+            <div class="produto-caro">
+                <div class="produto-caro-titulo">
+                    <h3>Produto Mais Caro:</h3>
+                </div>
+                <div class="produto-caro-resultado">
+                    <p id="produto-caro-nome">teste</p>
+                </div>
+            </div>
+            <div class="produto-quantidade">
+                <div class="produto-quantidade-titulo">
+                    <h3>Maior Quantidade:</h3>
+                </div>
+                <div class="produto-quantidade-resultado">
+                    <p id="produto-quantidade-nome">teste</p>
+                </div>
+            </div>
+            <div class="valor-estoque">
+                <div class="valor-estoque-titulo">
+                    <h3>Valor Total em Estoque:</h3>
+                </div>
+                <div class="valor-estoque-resultado">
+                    <p id="valor-estoque">R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
