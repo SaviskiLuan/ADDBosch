@@ -1,5 +1,5 @@
-import pedido from './pedido.js'
+import pedidosRoutes from './pedidos.js'
 
 export default function (app) {
-    app.use('/pedidos', pedido)
+    app.use('/pedidos', pedidosRoutes)
 }
